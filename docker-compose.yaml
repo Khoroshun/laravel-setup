@@ -135,7 +135,7 @@ services:
           POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
           POSTGRES_DB: ${POSTGRES_DB}
       volumes:
-          - "dbdata:/var/lib/postgresql/data"
+          - "laraveldbdata:/var/lib/postgresql/data"
       networks:
           - local
     adminer:
@@ -155,7 +155,7 @@ networks:
 volumes:
     appdata:
         driver: local
-    dbdata:
+    laraveldbdata:
         driver: local
     redisdata:
       driver: local
